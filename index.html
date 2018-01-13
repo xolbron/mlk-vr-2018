@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TAU VR</title>
+        <script src="https://rawgit.com/oscarmarinmiro/aframe-video-controls/master/dist/aframe-video-controls.min.js"></script>
+         <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+        <!--Emotional Video of Historic Figures-->
+        <a-sky src="mlk-360-video.mp4"></a-sky>
+         <a-entity>
+                <a-camera>
+                    <a-cursor
+                        color="black"
+                        geometry="primitive: ring; radiusInner: .01; radiusOuter: .018"
+                    ></a-cursor>
+                </a-camera>
+            </a-entity>
+					
+				
+				<!-- This is the water pollution video -- beginning -->
+					<a-entity id="watervideo" visible="true">
+						<a-video 
+							src="mlk-history-people.mp4" 
+							position="0.3 2.1 .6" 
+							width=".75" 
+							height=".5"
+							autoplay="true"
+							rotation="20 200 0" 
+							visible="true"
+						></a-video>
+					</a-entity>
+					<a-entity 
+						video-controls=
+							"src:mlk-history-people.mp4; 
+							barColor:red; 
+							size:1;
+							distance:1"
+					></a-entity>
+				<!-- This is the water pollution video -- ending -->
+            <a-text position="-15 11.5 7" rotation="0 75 0" scale="5 5 5 " color="black" value="Martin Luther King Day 2018"></a-text>
+        </a-scene>
+    </body>
+</html>
